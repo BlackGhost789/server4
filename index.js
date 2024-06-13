@@ -5,6 +5,8 @@ const app = express();
 
 let i = 0;
 app.get('/loop',async (req, res)=> {
+    i++
+    console.log(i);
     await axios.get('https://informatique-dz-api.onrender.com/');
     axios.get('https://server2amine.onrender.com/external-api');
         
