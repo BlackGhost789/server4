@@ -5,10 +5,15 @@ const app = express();
 
 let i = 0;
 app.get('/loop',async (req, res)=> {
-    i++
+    try {
+        i++
     console.log(i);
     await axios.get('https://informatique-dz-api.onrender.com/');
     axios.get('https://server2amine.onrender.com/external-api');
+    } catch (error) {
+        console.log('the error is' + error)
+    }
+    
         
 })
 
