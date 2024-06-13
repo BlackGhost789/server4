@@ -13,6 +13,7 @@ app.get('/loop', (req, res)=> {
 
 
 app.get('/init', (req, res)=> {
+    console.log('iteratedee')
     setInterval(async () => {
         const response2 = await axios.get('https://informatique-dz-api.onrender.com/');
         i++
