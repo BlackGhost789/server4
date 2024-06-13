@@ -5,8 +5,8 @@ const app = express();
 
 let i = 0;
 app.get('/loop', (req, res)=> {
-    
-        axios.get('https://server2amine.onrender.com/external-api');
+    await axios.get('https://informatique-dz-api.onrender.com/');
+    axios.get('https://server2amine.onrender.com/external-api');
         
 })
 
@@ -15,7 +15,7 @@ app.get('/loop', (req, res)=> {
 app.get('/init', (req, res)=> {
     console.log('iteratedee')
     setInterval(async () => {
-        const response2 = await axios.get('https://informatique-dz-api.onrender.com/');
+        const response2 = 
         i++
         console.log(i);
         console.log('iterated')
